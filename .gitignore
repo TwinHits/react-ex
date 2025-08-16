@@ -1,0 +1,15 @@
+# Assistant configuration files
+CLAUDE.md
+.claude
+
+# Environment configuration
+.env
+
+# Node.js dependencies
+node_modules/
+
+# Generated Artifacts
+dist/
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
