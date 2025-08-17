@@ -13,5 +13,16 @@ export default defineConfig({
   },
   test: {
     environment: "jsdom",
+    coverage: {
+      reporter: ["text", "json", "html"],
+      thresholds: {
+        global: {
+          branches: 33,
+          functions: 33,
+          lines: 43,
+          statements: 43,
+        },
+      },
+    },
   },
 });

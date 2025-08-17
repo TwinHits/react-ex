@@ -6,11 +6,12 @@
   },
   "scripts": {
     "dev": "vite",
-    "format": "prettier --write .",
     "lint": "eslint . --fix",
+    "format": "prettier --write .",
     "test": "vitest",
+    "test:coverage": "vitest run --coverage",
     "build": "vite build",
-    "check": "prettier --check . && eslint .",
+    "check": "prettier --check . && eslint . && npm run test:coverage",
     "clean": "rm -rf dist *.tsbuildinfo vite.config.js vite.config.d.ts"
   },
   "dependencies": {
@@ -25,6 +26,7 @@
     "@typescript-eslint/eslint-plugin": "^8.39.1",
     "@typescript-eslint/parser": "^8.39.1",
     "@vitejs/plugin-react": "^5.0.0",
+    "@vitest/coverage-v8": "^3.2.4",
     "eslint": "^9.33.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-react-hooks": "^5.2.0",
