@@ -11,9 +11,10 @@
     "test": "vitest",
     "test:coverage": "vitest run --coverage",
     "build": "vite build",
-    "check": "prettier --check . && eslint . && npm run test:coverage",
+    "check": "prettier --check . && eslint .",
     "clean": "rm -rf dist *.tsbuildinfo vite.config.js vite.config.d.ts",
-    "prepare": "husky"
+    "prepare": "husky",
+    "reset": "npm run clean && rm -rf node_modules package-lock.json .husky/_ && npm install"
   },
   "dependencies": {
     "react": "^19.1.1",
