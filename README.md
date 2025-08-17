@@ -30,6 +30,13 @@ src/
 └── main.tsx       # Entry point
 ```
 
+**Debugging:**
+
+1. Start the development server: `npm run dev`
+2. Go to Run and Debug in VS Code
+3. Select "Launch Chrome" configuration
+4. Set breakpoints to debug in your browser
+
 ## Testing
 
 ```bash
