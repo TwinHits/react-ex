@@ -12,9 +12,9 @@
     "test:coverage": "vitest run --coverage",
     "build": "vite build",
     "check": "prettier --check . && eslint .",
-    "clean": "rm -rf dist *.tsbuildinfo vite.config.js vite.config.d.ts coverage",
+    "clean": "rimraf dist *.tsbuildinfo vite.config.js vite.config.d.ts coverage",
     "prepare": "husky",
-    "reset": "npm run clean && rm -rf node_modules package-lock.json .husky/_ && npm install"
+    "reset": "npm run clean && rimraf node_modules package-lock.json .husky/_ && npm install"
   },
   "dependencies": {
     "react": "^19.2.0",
@@ -35,6 +35,7 @@
     "husky": "^9.1.7",
     "jsdom": "^27.0.0",
     "prettier": "^3.6.2",
+    "rimraf": "^6.0.1",
     "typescript": "^5.9.3",
     "vite": "^7.1.9",
     "vitest": "^3.2.4"
