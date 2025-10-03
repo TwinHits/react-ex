@@ -14,3 +14,9 @@ dist/
 vite.config.js
 vite.config.d.ts
 coverage/
+
+# Editor artifacts
+*~
+*.un~
+*.swp
+*.swo

@@ -12,7 +12,7 @@
     "test:coverage": "vitest run --coverage",
     "build": "vite build",
     "check": "prettier --check . && eslint .",
-    "clean": "rimraf dist *.tsbuildinfo vite.config.js vite.config.d.ts coverage",
+    "clean": "rimraf dist coverage vite.config.js vite.config.d.ts",
     "prepare": "husky",
     "reset": "npm run clean && rimraf node_modules package-lock.json .husky/_ && npm install"
   },
