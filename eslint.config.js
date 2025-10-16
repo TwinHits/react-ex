@@ -16,11 +16,6 @@ export default [
       parserOptions: {
         ecmaFeatures: { jsx: true },
       },
-      globals: {
-        document: "readonly",
-        window: "readonly",
-        console: "readonly",
-      },
     },
     plugins: {
       "@typescript-eslint": tseslint,
@@ -29,6 +24,7 @@ export default [
     rules: {
       ...tseslint.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
+      "no-undef": "off",
     },
   },
   prettier,
