@@ -1,6 +1,6 @@
-# Assistant configuration files
+# Assistant configuration files (.claude/skills is shared and tracked)
 CLAUDE.md
-.claude
+.claude/settings.local.json
 
 # Environment configuration
 .env

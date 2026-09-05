@@ -1,6 +1,6 @@
-# [Project Name]
+# React Starter
 
-[Project description]
+A template for starting new React repos. It carries everything a project needs on day one and nothing tied to any particular product. If you find yourself deleting a folder before you can start, that folder should not have been in the template.
 
 ## Quick Start
 
@@ -9,49 +9,18 @@ npm install
 npm run dev
 ```
 
-## Commands
+## Starting A New Project
 
-| Command          | Purpose                |
-| ---------------- | ---------------------- |
-| `npm run dev`    | Start dev server       |
-| `npm run clean`  | Remove generated files |
-| `npm run format` | Format code            |
-| `npm run lint`   | Fix code issues        |
-| `npm run test`   | Run tests              |
-| `npm run build`  | Build for production   |
-| `npm run check`  | Check without fixing   |
+Set `name` and `version` in `package.json`, replace the heading and description above, change `<title>` in `index.html`, then replace `src/App/`.
 
-## Structure
+## Conventions
 
-```
-src/
-├── App/           # Main app component
-├── components/    # Reusable components
-└── main.tsx       # Entry point
-```
-
-**Debugging:**
-
-1. Start the development server: `npm run dev`
-2. Go to Run and Debug in VS Code
-3. Select "Launch Chrome" configuration
-4. Set breakpoints to debug in your browser
-
-## Testing
-
-```bash
-npm run test
-```
-
-Tests use `.spec.tsx` naming and are co-located with components:
-
-## Building
-
-```bash
-npm run build
-```
-
-Production builds create a single minified JavaScript file with no code splitting.
+- **Stack** — React, TypeScript in strict mode, Vite, Vitest with jsdom, ESLint, Prettier, Husky.
+- **Components** — one folder each, with an `index.ts` re-exporting the default.
+- **Imports** — `@/` resolves to `src/`. No relative paths that climb.
+- **Tests** — `test/` mirrors `src/` folder for folder, `.spec.tsx` naming.
+- **Node** — pinned in `.nvmrc` and `engines`, tracking the active LTS line.
+- **Hooks** — `check` on commit, `test:coverage` on push. Raise the coverage thresholds as the project grows.
 
 ## Configuration
 
@@ -59,12 +28,10 @@ Every configuration line serves a deliberate purpose. Please do not declare defa
 
 ## VS Code
 
-**Install the Recommended Extensions:**
+Install the recommended extensions when prompted. `.vscode/` holds the settings the project requires and a Chrome launch configuration for debugging against `npm run dev`; keep personal preferences in your user settings.
 
-- Open Command Palette (`Ctrl+Shift+P`)
-- Run `Extensions: Show Recommended Extensions`
-- Install the prompted extensions
+## Claude Code
 
-**Workspace vs Personal Settings:**
+`.claude/skills/` is shared. `audit-and-update-dependencies` drives `npm run update`, taking packages and Node as far as peer dependencies allow, then auditing and verifying.
 
-- `.vscode/settings.json` - Required project settings
+`CLAUDE.md` and `.claude/settings.local.json` are per-developer and ignored.
